@@ -1,0 +1,19 @@
+{
+    "posts":[
+        {
+            "id": 0,
+            "name":"post 1",
+            "constent":"This is the first post"
+        },
+        {
+            "id": 1,
+            "name":"post 2",
+            "constent":"This is the second post"
+        },
+        {
+            "id": 2,
+            "name":"post 3",
+            "constent":"This is the third post"
+        }
+    ]
+}
