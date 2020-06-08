@@ -1,9 +1,10 @@
 import {http} from './http';
+import {interface} from './ui'
 
 document.addEventListener('DOMContentLoaded', getjsonData);
 
 function getjsonData(){
     http.get('http://localhost:3000/posts')
-    .then(console.log(data))
-    .catch(console.log(err))
+    .then(data => interface.displayData(data))
+    .catch(err => console.log(err))
 }

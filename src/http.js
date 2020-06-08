@@ -34,4 +34,4 @@ class EasyHttp {
     }
 }
 
-const http = new EasyHttp
+export const http = new EasyHttp
