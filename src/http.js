@@ -24,12 +24,12 @@ class EasyHttp {
         const resData = await response.json()
         return resData
     }
-    async post(url, data){
+    async delete(url){
         const response = await fetch(url, {
             method: 'DELETE',
-            header:{'Content-type':'application/json'},
+            headers:{'Content-type':'application/json'}
         })
-        const resData = await 'Deleted Item'
+        const resData = await response.json()
         return resData
     }
 }
