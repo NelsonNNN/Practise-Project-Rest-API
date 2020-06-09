@@ -3,6 +3,8 @@ class UserInterface{
         this.post = document.querySelector('#posts')
         this.titleInput = document.querySelector('#title')
         this.contentInput = document.querySelector('#body')
+        this.id = document.querySelector('#id')
+        this.postBtn = document.querySelector('.post-submit')
     }
     displayData(datas){
         let posts = '';
@@ -46,6 +48,36 @@ class UserInterface{
     clearFields(){
         this.titleInput.value = ''
         this.contentInput.value = ''
+    }
+    addToForm(data){
+        this.titleInput.value = data.title
+        this.contentInput.value = data.content
+        this.id.value = data.id
+        this.changeBtn('edit')
+    }
+    changeBtn(type){
+        if(type === 'edit'){
+            this.postBtn.textContent = 'Update Post'
+            this.postBtn.className = 'post-submit btn btn-warning btn-block'
+
+            const btn = document.createElement('button')
+            btn.className = 'post-cancel btn btn-light btn-block'
+            btn.textContent = 'Cancel Edit'
+            const  card = document.querySelector('.card-form')
+            const form = document.querySelector('.form-end')
+            card.insertBefore(btn, form)
+        }else{
+            this.postBtn.textContent = 'Post It'
+            this.postBtn.className = 'post-submit btn btn-primary btn-block'
+            if(document.querySelector('.post-cancel')){
+                document.querySelector('.post-cancel').remove()
+            }
+            this.clearId()
+            this.clearFields()
+        }
+    }
+    clearId(){
+        this.id.value = ''
     }
 }
 

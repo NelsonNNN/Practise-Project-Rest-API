@@ -1,9 +1,9 @@
 {
   "posts": [
     {
-      "id": 2,
       "title": "post 3",
-      "content": "This is the third post"
+      "content": "This is the third updated post",
+      "id": 2
     },
     {
       "title": "Post 4",
